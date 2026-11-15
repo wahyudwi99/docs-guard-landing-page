@@ -17,6 +17,13 @@ npm run build
 
 Deploy `out/` to a static host. SEO includes server-rendered content, English metadata, canonical URL, Open Graph and Twitter cards, SoftwareApplication structured data, robots.txt, and sitemap.xml.
 
+### Cloudflare Workers
+
+The included `wrangler.jsonc` serves the static export from `out/`.
+For a Git-connected Workers deployment, set the build command to `npm run build`
+and the deploy command to `npx wrangler deploy`. Use Node.js 22 for the build.
+Keep `wrangler.jsonc` in the same root directory as `package.json`.
+
 Update the origin in `app/layout.js`, `app/sitemap.js`, and `app/robots.js` when switching to a custom domain. Public, crawlable hosting is required for search traffic. Submit `/sitemap.xml` in Google Search Console after publication.
 
 No ratings, reviews, download counts, or free-trial claims are included. Review feature availability and pricing against the current App Store listing before a public launch.
